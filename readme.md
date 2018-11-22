@@ -32,7 +32,7 @@ Here is a composer command to create a new module project. Ensure you read the [
 composer.json to designate your code as a SilverStripe module. 
 
 ```
-composer require silverstripe-module/skeleton 2.x-dev
+composer require robbieaverill/silverstripe-module 2.x-dev
 ```
 
 **Note:** When you have completed your module, submit it to Packagist or add it as a VCS repository to your
