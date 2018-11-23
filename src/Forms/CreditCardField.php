@@ -3,25 +3,13 @@
 namespace SilverStripeModule\Skeleton\Forms;
 
 use SilverStripe\Forms\TextField;
-use SilverStripe\View\Requirements;
 
 class CreditCardField extends TextField
 {
-    /**
-     * Add the necessary JavaScript and CSS bundles
-     *
-     * {@inheritdoc}
-     */
-    public function Field($properties = [])
-    {
-        Requirements::css('robbieaverill/silverstripe-module: client/dist/styles/bundle.css');
-        Requirements::javascript('robbieaverill/silverstripe-module: client/dist/js/bundle.js');
-
-        return parent::Field($properties);
-    }
+    protected $schemaComponent = 'CreditCardField';
 
     /**
-     * Adds the "schema" data in the attributes to render in the SilverStripe template. Used for non-React forms.
+     * For non-React forms, adds the "schema" data in the attributes to render in the SilverStripe template
      *
      * {@inheritdoc}
      */

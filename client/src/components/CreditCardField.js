@@ -36,6 +36,14 @@ class CreditCardField extends Component {
     };
 
     this.setState(newState);
+
+    // Allow delegation to passed change handlers, e.g. for setting values to redux form state
+    // Pass the concatenated values instead of the individual form field value.
+    if (typeof this.props.onChange === 'function') {
+      this.props.onChange(event, {
+        value: this.implodeValues(),
+      });
+    }
   }
 
   /**
