@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ddescriptionTransformation = (WrappedComponent) => (props) => {
+const DescriptionTransformation = (WrappedComponent) => (props) => {
   const passedProps = {
     ...props,
     extraClass: `${props.extraClass} text-field--transformed`,
@@ -11,4 +11,4 @@ const ddescriptionTransformation = (WrappedComponent) => (props) => {
   );
 };
 
-export default ddescriptionTransformation;
+export default DescriptionTransformation;
